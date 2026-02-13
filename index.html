@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MDF Eshiklar Navoiy — O'z Ishlab Chiqaruvchi</title>
+  <meta name="description" content="Navoiy shahri, Darchon bozori. MDF interyer eshiklar ishlab chiqarish, yuqori sifat, tez yetkazib berish va o'rnatish."/>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --text: #1d1d1f;
+      --accent: #007aff; /* macOS blue */
+      --call-red: #ff3b30;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+      text-align: center;
+      padding: 6rem 1rem 4rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1.5rem;
+    }
+    section { padding: 5rem 0; }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: var(--text);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .door-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(10px);
+    }
+    .door-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+    .door-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .door-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0.5rem 0;
+    }
+    .advantages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .adv-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .cta {
+      text-align: center;
+      padding: 6rem 1rem;
+      background: white;
+      border-radius: 32px;
+      margin: 4rem 0;
+      box-shadow: var(--shadow);
+    }
+    .cta h2 { margin-bottom: 1.5rem; }
+    footer {
+      background: #1d1d1f;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    /* Pulsing Call Button (heartbeat like) */
+    .call-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 80px;
+      height: 80px;
+      background: var(--call-red);
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(255,59,48,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: white;
+      text-decoration: none;
+      z-index: 999;
+      animation: heartbeat 1.8s infinite ease-in-out;
+      transition: transform 0.3s;
+    }
+    .call-btn:hover {
+      transform: scale(1.1);
+    }
+    @keyframes heartbeat {
+      0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0.7); }
+      20%  { transform: scale(1.15); box-shadow: 0 0 0 20px rgba(255,59,48,0); }
+      40%  { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0); }
+      60%  { transform: scale(1.12); box-shadow: 0 0 0 15px rgba(255,59,48,0); }
+      80%  { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0); }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.8rem; }
+      .call-btn { width: 70px; height: 70px; bottom: 20px; right: 20px; font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MDF Eshiklar Navoiy</h1>
+    <p>O'z ustaxonamizda ishlab chiqaramiz • Yuqori sifatli interyer eshiklar</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Bizning afzalliklar</h2>
+      <div class="advantages">
+        <div class="adv-item">
+          <h3>O'z masterkasi</h3>
+          <p>Navoiy shahri, Darchon bozori — sifatni to'liq nazorat qilamiz.</p>
+        </div>
+        <div class="adv-item">
+          <h3>Tez tayyorlash</h3>
+          <p>3–7 kun oddiy modellar, buyurtma bo'yicha 10–14 kun.</p>
+        </div>
+        <div class="adv-item">
+          <h3>O'rnatish</h3>
+          <p>Professional jamoa — Navoiy va atrofdagi hududlarda.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Bizning modellar (2026 narxlari)</h2>
+      <div class="gallery">
+        <div class="door-card">
+          <img src="https://erkado.pl/wp-content/uploads/2025/04/frezja-9-2-v1-scaled.jpg" alt="Bej rangli MDF eshik">
+          <div class="door-info">
+            <h3>Bej Minimal</h3>
+            <p class="price">1 300 000 so'm</p>
+            <p>Tabiiy ko'rinish, yashirin quti</p>
+          </div>
+        </div>
+        <div class="door-card">
+          <img src="https://erkado.pl/wp-content/uploads/2025/03/wiz-baldur-1-cappuccino-klamka-bella-slim-kwardrat-mosiadz-blyszczacy-910x500.jpg" alt="Kapuchino MDF">
+          <div class="door-info">
+            <h3>Kapuchino Shpon</h3>
+            <p class="price">1 550 000 so'm</p>
+            <p>Premium yog'och tekstura</p>
+          </div>
+        </div>
+        <div class="door-card">
+          <img src="https://m.media-amazon.com/images/I/811hZ0QtNCL._AC_UF894,1000_QL80_.jpg" alt="Qora MDF bilan shisha">
+          <div class="door-info">
+            <h3>Qora Modern (frosted shisha)</h3>
+            <p class="price">1 650 000 so'm</p>
+            <p>Fransuz uslubi, ikki qavat</p>
+          </div>
+        </div>
+        <div class="door-card">
+          <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/19c53da2-6daa-4907-a38b-674fe53b142f.__CR0,0,1940,1200_PT0_SX970_V1___.jpg" alt="Qora mat MDF">
+          <div class="door-info">
+            <h3>Qora Mat French</h3>
+            <p class="price">1 450 000 so'm</p>
+            <p>Frosted shisha insertlar</p>
+          </div>
+        </div>
+        <!-- Qo'shimcha eshiklar qo'shishing mumkin, yoki o'z suratlaringni yukla -->
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Biz bilan bog'laning!</h2>
+      <p>Tez maslahat, o'lchov va buyurtma uchun qo'ng'iroq qiling yoki yozing.</p>
+      <p style="font-size:1.4rem; margin:1.5rem 0;">
+        <strong>+998 94 221 69 69</strong><br>
+        Navoiy shahri, Darchon bozori
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 MDF Eshiklar Navoiy. O'z ishlab chiqarish • +998942216969</p>
+  </footer>
+
+  <!-- Pulsing call button -->
+  <a href="tel:+998942216969" class="call-btn" title="Qo'ng'iroq qiling">📞</a>
+
+</body>
+</html>
