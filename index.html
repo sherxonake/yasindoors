@@ -3,126 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MDF Eshiklar Navoiy — Muhtasham sifat, o'z narx!</title>
-  <meta name="description" content="Navoiy shahri, Darchon bozori. O'z ustaxonamizda MDF interyer eshiklar ishlab chiqarish. 200+ model, tez yetkazib berish, o'rnatish."/>
+  <title>MDF Eshiklar Navoiy — Islom sifati, o'z narx!</title>
+  <meta name="description" content="Navoiy shahri, Darchon bozori. O'z ustaxonamizda yuqori sifatli MDF interyer eshiklar ishlab chiqarish. Tez yetkazib berish va o'rnatish."/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --primary: #1a1a1a;
-      --accent: #c9a96e; /* золотисто-деревянный премиум */
+      --accent: #c9a96e;
       --light: #f8f6f3;
       --gray: #e0e0e0;
       --call: #d32f2f;
+      --text: #2c2c2c;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--light);
-      color: var(--primary);
+      color: var(--text);
       line-height: 1.7;
     }
+
+    /* Hero */
     header.hero {
       position: relative;
       height: 100vh;
       min-height: 700px;
-      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&auto=format&fit=crop') center/cover no-repeat;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
+
     .hero-content {
       max-width: 900px;
     }
+
+    .logo {
+      max-width: 280px;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      animation: fadeIn 1.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4.5rem;
+      font-size: 4.8rem;
       margin-bottom: 1rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
+
     .hero p {
       font-size: 1.6rem;
       margin-bottom: 2.5rem;
       opacity: 0.95;
     }
+
     .btn {
       background: var(--accent);
       color: var(--primary);
-      padding: 1rem 2.5rem;
+      padding: 1.1rem 3rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1.3rem;
       display: inline-block;
-      transition: all 0.3s;
-      box-shadow: 0 10px 30px rgba(201,169,110,0.3);
+      transition: all 0.35s;
+      box-shadow: 0 10px 30px rgba(201,169,110,0.35);
     }
-    .btn:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(201,169,110,0.4); }
 
-    .container { max-width: 1300px; margin: auto; padding: 0 2rem; }
-    section { padding: 8rem 0; }
+    .btn:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(201,169,110,0.45);
+    }
+
+    /* Container & Sections */
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 9rem 0;
+    }
+
     h2 {
       text-align: center;
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+      font-size: 3.6rem;
       margin-bottom: 4rem;
       color: var(--primary);
     }
+
+    /* Advantages */
     .advantages {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 3rem;
     }
+
     .adv-card {
       background: white;
-      padding: 3rem 2rem;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      padding: 3.5rem 2rem;
+      border-radius: 24px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
       text-align: center;
-      transition: all 0.4s;
+      transition: all 0.4s ease;
     }
-    .adv-card:hover { transform: translateY(-15px); box-shadow: 0 25px 60px rgba(0,0,0,0.12); }
-    .adv-card h3 { font-size: 1.8rem; margin: 1.5rem 0 1rem; }
 
+    .adv-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.13);
+    }
+
+    .adv-card h3 {
+      font-size: 1.9rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 2.5rem;
     }
+
     .door-card {
       background: white;
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.1);
       transition: all 0.5s ease;
     }
-    .door-card:hover { transform: scale(1.05); box-shadow: 0 30px 70px rgba(0,0,0,0.15); }
+
+    .door-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+    }
+
     .door-card img {
       width: 100%;
-      height: 320px;
+      height: 340px;
       object-fit: cover;
-      transition: transform 0.6s;
+      transition: transform 0.7s ease;
     }
-    .door-card:hover img { transform: scale(1.12); }
-    .door-info { padding: 2rem; text-align: center; }
-    .price { font-size: 2rem; font-weight: 700; color: var(--accent); }
 
+    .door-card:hover img {
+      transform: scale(1.12);
+    }
+
+    .door-info {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0.8rem 0;
+    }
+
+    /* CTA */
     .cta-section {
       background: var(--primary);
       color: white;
       text-align: center;
       padding: 10rem 2rem;
     }
-    .cta-section .btn { background: white; color: var(--primary); }
 
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 4rem 2rem;
+    .cta-section .btn {
+      background: white;
+      color: var(--primary);
     }
 
+    /* Footer */
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+
+    footer .logo {
+      max-width: 220px;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+    }
+
+    /* Pulsing Call Button */
     .call-btn {
       position: fixed;
       bottom: 40px;
@@ -134,20 +221,30 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: white;
-      box-shadow: 0 15px 40px rgba(211,47,47,0.4);
+      box-shadow: 0 15px 45px rgba(211,47,47,0.4);
       z-index: 1000;
-      animation: pulse 2s infinite;
+      animation: pulse 2.2s infinite ease-in-out;
       text-decoration: none;
+      transition: all 0.3s;
     }
+
+    .call-btn:hover {
+      transform: scale(1.1);
+    }
+
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.15); }
     }
+
     @media (max-width: 768px) {
-      .hero h1 { font-size: 3rem; }
-      .call-btn { width: 70px; height: 70px; bottom: 20px; right: 20px; font-size: 2rem; }
+      .hero h1 { font-size: 3.2rem; }
+      .logo { max-width: 220px; }
+      .call-btn { width: 70px; height: 70px; bottom: 25px; right: 25px; font-size: 2.2rem; }
+      section { padding: 6rem 0; }
+      h2 { font-size: 2.8rem; }
     }
   </style>
 </head>
@@ -155,8 +252,9 @@
 
   <header class="hero">
     <div class="hero-content">
+      <img src="./logoislom.png" alt="Islom MDF Eshiklar Logosi" class="logo">
       <h1>MDF Eshiklar Navoiy</h1>
-      <p>O'z ustaxonamizda premium sifatli interyer eshiklar ishlab chiqaramiz • 200+ model • Tez yetkazib berish va professional o'rnatish</p>
+      <p>O'z ustaxonamizda ishlab chiqarilgan premium sifatli interyer eshiklar • Darchon bozori • Tez yetkazib berish va o'rnatish</p>
       <a href="tel:+998942216969" class="btn">Bepul maslahat oling • +998 94 221 69 69</a>
     </div>
   </header>
@@ -168,15 +266,15 @@
       <div class="advantages">
         <div class="adv-card">
           <h3>O'z ishlab chiqarish</h3>
-          <p>Navoiy shahri, Darchon bozori — to'liq nazorat ostida yuqori sifat va arzon narx.</p>
+          <p>Navoiy shahri, Darchon bozori — sifatni to'liq nazorat qilamiz, narxlarni arzon tutamiz.</p>
         </div>
         <div class="adv-card">
-          <h3>Tez va sifatli</h3>
-          <p>Oddiy modellar 3-7 kun, buyurtma bo'yicha 10-14 kun ichida tayyor.</p>
+          <h3>Tez tayyorlash</h3>
+          <p>Oddiy modellar 3–7 kun, maxsus buyurtmalar 10–14 kun ichida tayyor.</p>
         </div>
         <div class="adv-card">
           <h3>Professional o'rnatish</h3>
-          <p>Navoiy va atrofdagi tumanlarda tajribali brigada — kalit topshirish.</p>
+          <p>Navoiy va atrofdagi hududlarda tajribali jamoa — kalit topshirish xizmati.</p>
         </div>
       </div>
     </section>
@@ -184,49 +282,56 @@
     <section>
       <h2>Bizning eng mashhur modellar</h2>
       <div class="gallery">
-        <!-- Реальные фото загрузи в репо или используй ссылки на свои -->
         <div class="door-card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Kapuchino MDF">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop" alt="Kapuchino Premium Shpon">
           <div class="door-info">
-            <h3>Kapuchino Premium Shpon</h3>
+            <h3>Kapuchino Premium</h3>
             <p class="price">1 650 000 so'm</p>
-            <p>Tabiiy yog'och ko'rinishi, yashirin quti</p>
+            <p>Tabiiy shpon, yashirin quti</p>
           </div>
         </div>
+
         <div class="door-card">
-          <img src="https://images.unsplash.com/photo-1600565193348-f74af9a0a175?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oq Mat MDF">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74af9a0a175?w=800&auto=format&fit=crop" alt="Oq Mat Modern">
           <div class="door-info">
             <h3>Oq Mat Modern</h3>
             <p class="price">1 350 000 so'm</p>
-            <p>Minimalizm, mat qoplama</p>
+            <p>Minimal dizayn, mat qoplama</p>
           </div>
         </div>
+
         <div class="door-card">
-          <img src="https://images.unsplash.com/photo-1567016432779-5d976d924a56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kulrang MDF">
+          <img src="https://images.unsplash.com/photo-1567016432779-5d976d924a56?w=800&auto=format&fit=crop" alt="Kulrang Tekstura">
           <div class="door-info">
             <h3>Kulrang Tekstura</h3>
             <p class="price">1 500 000 so'm</p>
-            <p>Rifleniy yuzasi, zamonaviy dizayn</p>
+            <p>Zamonaviy rifleniy yuza</p>
           </div>
         </div>
-        <!-- Qo'sh o'zingnikilarni -->
       </div>
     </section>
 
     <section class="cta-section">
       <h2>Buyurtma berish vaqti keldi!</h2>
-      <p style="font-size:1.8rem; margin:2rem 0;">Qo'ng'iroq qiling yoki Telegramga yozing — o'lchovga chiqamiz, maslahat beramiz, chegirmalar bor!</p>
-      <a href="tel:+998942216969" class="btn">+998 94 221 69 69 ga qo'ng'iroq</a>
-      <p style="margin-top:2rem;">Navoiy shahri, Darchon bozori</p>
+      <p style="font-size: 1.9rem; margin: 2rem 0 3rem;">
+        Qo'ng'iroq qiling yoki yozing — o'lchovga chiqamiz, maslahat beramiz, chegirmalar mavjud!
+      </p>
+      <a href="tel:+998942216969" class="btn">+998 94 221 69 69 ga qo'ng'iroq qiling</a>
+      <p style="margin-top: 2.5rem; font-size: 1.3rem;">
+        Navoiy shahri, Darchon bozori
+      </p>
     </section>
 
   </div>
 
   <footer>
-    <p>© 2026 MDF Eshiklar Navoiy • O'z ishlab chiqarish • +998 94 221 69 69 • Sherxon & Do'st & Baxti</p>
+    <img src="./logoislom.png" alt="Islom Logo" class="logo">
+    <p>© 2026 MDF Eshiklar Navoiy • O'z ishlab chiqarish • +998 94 221 69 69</p>
+    <p>Sherxon, Do'st & Baxti bilan birga</p>
   </footer>
 
-  <a href="tel:+998942216969" class="call-btn">📞</a>
+  <!-- Pulsing call button -->
+  <a href="tel:+998942216969" class="call-btn" title="Qo'ng'iroq qiling">📞</a>
 
 </body>
 </html>
