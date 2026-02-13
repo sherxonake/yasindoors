@@ -3,230 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MDF Eshiklar Navoiy — O'z Ishlab Chiqaruvchi</title>
-  <meta name="description" content="Navoiy shahri, Darchon bozori. MDF interyer eshiklar ishlab chiqarish, yuqori sifat, tez yetkazib berish va o'rnatish."/>
+  <title>MDF Eshiklar Navoiy — Muhtasham sifat, o'z narx!</title>
+  <meta name="description" content="Navoiy shahri, Darchon bozori. O'z ustaxonamizda MDF interyer eshiklar ishlab chiqarish. 200+ model, tez yetkazib berish, o'rnatish."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --bg: #f5f5f7;
-      --text: #1d1d1f;
-      --accent: #007aff; /* macOS blue */
-      --call-red: #ff3b30;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --primary: #1a1a1a;
+      --accent: #c9a96e; /* золотисто-деревянный премиум */
+      --light: #f8f6f3;
+      --gray: #e0e0e0;
+      --call: #d32f2f;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--primary);
+      line-height: 1.7;
     }
-    header {
-      background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    header.hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 6rem 1rem 4rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 0 1rem;
     }
-    header h1 {
-      font-size: 3.5rem;
+    .hero-content {
+      max-width: 900px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.6rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+    }
+    .btn {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      display: inline-block;
+      transition: all 0.3s;
+      box-shadow: 0 10px 30px rgba(201,169,110,0.3);
     }
-    header p {
-      font-size: 1.4rem;
-      opacity: 0.9;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 1.5rem;
-    }
-    section { padding: 5rem 0; }
+    .btn:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(201,169,110,0.4); }
+
+    .container { max-width: 1300px; margin: auto; padding: 0 2rem; }
+    section { padding: 8rem 0; }
     h2 {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: var(--text);
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 4rem;
+      color: var(--primary);
     }
-    .gallery {
+    .advantages {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
+      gap: 3rem;
+    }
+    .adv-card {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.4s;
+    }
+    .adv-card:hover { transform: translateY(-15px); box-shadow: 0 25px 60px rgba(0,0,0,0.12); }
+    .adv-card h3 { font-size: 1.8rem; margin: 1.5rem 0 1rem; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
     }
     .door-card {
       background: white;
       border-radius: 24px;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      transition: all 0.5s ease;
     }
-    .door-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-    }
+    .door-card:hover { transform: scale(1.05); box-shadow: 0 30px 70px rgba(0,0,0,0.15); }
     .door-card img {
       width: 100%;
-      height: 260px;
+      height: 320px;
       object-fit: cover;
+      transition: transform 0.6s;
     }
-    .door-info {
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .price {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin: 0.5rem 0;
-    }
-    .advantages {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      text-align: center;
-    }
-    .adv-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-    .cta {
-      text-align: center;
-      padding: 6rem 1rem;
-      background: white;
-      border-radius: 32px;
-      margin: 4rem 0;
-      box-shadow: var(--shadow);
-    }
-    .cta h2 { margin-bottom: 1.5rem; }
-    footer {
-      background: #1d1d1f;
+    .door-card:hover img { transform: scale(1.12); }
+    .door-info { padding: 2rem; text-align: center; }
+    .price { font-size: 2rem; font-weight: 700; color: var(--accent); }
+
+    .cta-section {
+      background: var(--primary);
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 10rem 2rem;
+    }
+    .cta-section .btn { background: white; color: var(--primary); }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 4rem 2rem;
     }
 
-    /* Pulsing Call Button (heartbeat like) */
     .call-btn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 80px;
-      height: 80px;
-      background: var(--call-red);
+      bottom: 40px;
+      right: 40px;
+      width: 90px;
+      height: 90px;
+      background: var(--call);
       border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(255,59,48,0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       color: white;
+      box-shadow: 0 15px 40px rgba(211,47,47,0.4);
+      z-index: 1000;
+      animation: pulse 2s infinite;
       text-decoration: none;
-      z-index: 999;
-      animation: heartbeat 1.8s infinite ease-in-out;
-      transition: transform 0.3s;
     }
-    .call-btn:hover {
-      transform: scale(1.1);
-    }
-    @keyframes heartbeat {
-      0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0.7); }
-      20%  { transform: scale(1.15); box-shadow: 0 0 0 20px rgba(255,59,48,0); }
-      40%  { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0); }
-      60%  { transform: scale(1.12); box-shadow: 0 0 0 15px rgba(255,59,48,0); }
-      80%  { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,59,48,0); }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
     @media (max-width: 768px) {
-      header h1 { font-size: 2.8rem; }
+      .hero h1 { font-size: 3rem; }
       .call-btn { width: 70px; height: 70px; bottom: 20px; right: 20px; font-size: 2rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>MDF Eshiklar Navoiy</h1>
-    <p>O'z ustaxonamizda ishlab chiqaramiz • Yuqori sifatli interyer eshiklar</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>MDF Eshiklar Navoiy</h1>
+      <p>O'z ustaxonamizda premium sifatli interyer eshiklar ishlab chiqaramiz • 200+ model • Tez yetkazib berish va professional o'rnatish</p>
+      <a href="tel:+998942216969" class="btn">Bepul maslahat oling • +998 94 221 69 69</a>
+    </div>
   </header>
 
   <div class="container">
 
     <section>
-      <h2>Bizning afzalliklar</h2>
+      <h2>Bizning afzalliklarimiz</h2>
       <div class="advantages">
-        <div class="adv-item">
-          <h3>O'z masterkasi</h3>
-          <p>Navoiy shahri, Darchon bozori — sifatni to'liq nazorat qilamiz.</p>
+        <div class="adv-card">
+          <h3>O'z ishlab chiqarish</h3>
+          <p>Navoiy shahri, Darchon bozori — to'liq nazorat ostida yuqori sifat va arzon narx.</p>
         </div>
-        <div class="adv-item">
-          <h3>Tez tayyorlash</h3>
-          <p>3–7 kun oddiy modellar, buyurtma bo'yicha 10–14 kun.</p>
+        <div class="adv-card">
+          <h3>Tez va sifatli</h3>
+          <p>Oddiy modellar 3-7 kun, buyurtma bo'yicha 10-14 kun ichida tayyor.</p>
         </div>
-        <div class="adv-item">
-          <h3>O'rnatish</h3>
-          <p>Professional jamoa — Navoiy va atrofdagi hududlarda.</p>
+        <div class="adv-card">
+          <h3>Professional o'rnatish</h3>
+          <p>Navoiy va atrofdagi tumanlarda tajribali brigada — kalit topshirish.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Bizning modellar (2026 narxlari)</h2>
+      <h2>Bizning eng mashhur modellar</h2>
       <div class="gallery">
+        <!-- Реальные фото загрузи в репо или используй ссылки на свои -->
         <div class="door-card">
-          <img src="https://erkado.pl/wp-content/uploads/2025/04/frezja-9-2-v1-scaled.jpg" alt="Bej rangli MDF eshik">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Kapuchino MDF">
           <div class="door-info">
-            <h3>Bej Minimal</h3>
-            <p class="price">1 300 000 so'm</p>
-            <p>Tabiiy ko'rinish, yashirin quti</p>
-          </div>
-        </div>
-        <div class="door-card">
-          <img src="https://erkado.pl/wp-content/uploads/2025/03/wiz-baldur-1-cappuccino-klamka-bella-slim-kwardrat-mosiadz-blyszczacy-910x500.jpg" alt="Kapuchino MDF">
-          <div class="door-info">
-            <h3>Kapuchino Shpon</h3>
-            <p class="price">1 550 000 so'm</p>
-            <p>Premium yog'och tekstura</p>
-          </div>
-        </div>
-        <div class="door-card">
-          <img src="https://m.media-amazon.com/images/I/811hZ0QtNCL._AC_UF894,1000_QL80_.jpg" alt="Qora MDF bilan shisha">
-          <div class="door-info">
-            <h3>Qora Modern (frosted shisha)</h3>
+            <h3>Kapuchino Premium Shpon</h3>
             <p class="price">1 650 000 so'm</p>
-            <p>Fransuz uslubi, ikki qavat</p>
+            <p>Tabiiy yog'och ko'rinishi, yashirin quti</p>
           </div>
         </div>
         <div class="door-card">
-          <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/19c53da2-6daa-4907-a38b-674fe53b142f.__CR0,0,1940,1200_PT0_SX970_V1___.jpg" alt="Qora mat MDF">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74af9a0a175?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oq Mat MDF">
           <div class="door-info">
-            <h3>Qora Mat French</h3>
-            <p class="price">1 450 000 so'm</p>
-            <p>Frosted shisha insertlar</p>
+            <h3>Oq Mat Modern</h3>
+            <p class="price">1 350 000 so'm</p>
+            <p>Minimalizm, mat qoplama</p>
           </div>
         </div>
-        <!-- Qo'shimcha eshiklar qo'shishing mumkin, yoki o'z suratlaringni yukla -->
+        <div class="door-card">
+          <img src="https://images.unsplash.com/photo-1567016432779-5d976d924a56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kulrang MDF">
+          <div class="door-info">
+            <h3>Kulrang Tekstura</h3>
+            <p class="price">1 500 000 so'm</p>
+            <p>Rifleniy yuzasi, zamonaviy dizayn</p>
+          </div>
+        </div>
+        <!-- Qo'sh o'zingnikilarni -->
       </div>
     </section>
 
-    <section class="cta">
-      <h2>Biz bilan bog'laning!</h2>
-      <p>Tez maslahat, o'lchov va buyurtma uchun qo'ng'iroq qiling yoki yozing.</p>
-      <p style="font-size:1.4rem; margin:1.5rem 0;">
-        <strong>+998 94 221 69 69</strong><br>
-        Navoiy shahri, Darchon bozori
-      </p>
+    <section class="cta-section">
+      <h2>Buyurtma berish vaqti keldi!</h2>
+      <p style="font-size:1.8rem; margin:2rem 0;">Qo'ng'iroq qiling yoki Telegramga yozing — o'lchovga chiqamiz, maslahat beramiz, chegirmalar bor!</p>
+      <a href="tel:+998942216969" class="btn">+998 94 221 69 69 ga qo'ng'iroq</a>
+      <p style="margin-top:2rem;">Navoiy shahri, Darchon bozori</p>
     </section>
 
   </div>
 
   <footer>
-    <p>© 2026 MDF Eshiklar Navoiy. O'z ishlab chiqarish • +998942216969</p>
+    <p>© 2026 MDF Eshiklar Navoiy • O'z ishlab chiqarish • +998 94 221 69 69 • Sherxon & Do'st & Baxti</p>
   </footer>
 
-  <!-- Pulsing call button -->
-  <a href="tel:+998942216969" class="call-btn" title="Qo'ng'iroq qiling">📞</a>
+  <a href="tel:+998942216969" class="call-btn">📞</a>
 
 </body>
 </html>
