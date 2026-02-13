@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MDF Eshiklar Navoiyda — Sifatli tanlov  </title>
-  <meta name="description" content="Navoiy, Darxon bozori. O'z fabrikamizda premium MDF eshiklar. Tez yetkazib berish."/>
+  <title>MDF Eshiklar Navoiy — Islom sifati</title>
+  <meta name="description" content="Navoiy, Darxon bozori. O'z ustaxonamizda premium MDF eshiklar. Tez yetkazib berish."/>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --bg: #f5f5f7;
       --text: #1d1d1f;
       --accent: #007aff;
-      --glass: rgba(255, 255, 255, 0.48); /* уменьшил opacity — фон почти незаметен */
-      --blur: blur(14px); /* нежный blur, как в macOS */
-      --shadow: 0 4px 20px rgba(0,0,0,0.05); /* очень лёгкая тень */
+      --glass: rgba(255, 255, 255, 0.28);   /* очень лёгкий, почти незаметный белый фон */
+      --blur: blur(10px);                   /* минимальный blur */
+      --shadow: 0 4px 16px rgba(0,0,0,0.04);
       --call: #ff3b30;
     }
 
@@ -34,7 +34,7 @@
     header.hero {
       height: 100vh;
       min-height: 640px;
-      background: linear-gradient(to bottom, rgba(245,245,247,0.3), rgba(245,245,247,0.7)),
+      background: linear-gradient(to bottom, rgba(245,245,247,0.15), rgba(245,245,247,0.45)),
                   url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
       display: flex;
       align-items: center;
@@ -50,8 +50,8 @@
       -webkit-backdrop-filter: var(--blur);
       background: var(--glass);
       border-radius: 32px;
-      padding: 2.2rem 1.6rem; /* уменьшил padding — фон меньше "захватывает" */
-      border: 1px solid rgba(255,255,255,0.22);
+      padding: 1.8rem 1.4rem;               /* ещё меньше отступов внутри блока */
+      border: 1px solid rgba(255,255,255,0.18);
       box-shadow: var(--shadow);
       animation: fadeUp 1.4s ease-out;
     }
@@ -59,40 +59,40 @@
     .logo {
       max-width: 200px;
       height: auto;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 1.3rem;
       display: block;
-      filter: drop-shadow(0 3px 10px rgba(0,0,0,0.08));
+      filter: drop-shadow(0 3px 10px rgba(0,0,0,0.06));
     }
 
     h1 {
-      font-size: 3.2rem;
+      font-size: 3.1rem;
       font-weight: 700;
-      margin-bottom: 0.8rem;
-      letter-spacing: -0.4px;
+      margin-bottom: 0.7rem;
+      letter-spacing: -0.3px;
     }
 
     .hero p {
-      font-size: 1.35rem;
-      opacity: 0.92;
-      margin-bottom: 2rem;
+      font-size: 1.32rem;
+      opacity: 0.94;
+      margin-bottom: 1.8rem;
     }
 
     .btn {
       background: var(--accent);
       color: white;
-      padding: 0.95rem 2.2rem;
+      padding: 0.9rem 2.1rem;
       border-radius: 999px;
       text-decoration: none;
-      font-size: 1.18rem;
+      font-size: 1.16rem;
       font-weight: 600;
       display: inline-block;
       transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      box-shadow: 0 5px 18px rgba(0,122,255,0.25);
+      box-shadow: 0 5px 16px rgba(0,122,255,0.22);
     }
 
     .btn:hover {
       transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 10px 28px rgba(0,122,255,0.35);
+      box-shadow: 0 9px 24px rgba(0,122,255,0.32);
     }
 
     .container {
@@ -124,8 +124,8 @@
       -webkit-backdrop-filter: var(--blur);
       background: var(--glass);
       border-radius: 28px;
-      padding: 2rem 1.4rem; /* меньше padding — фон компактнее */
-      border: 1px solid rgba(255,255,255,0.2);
+      padding: 1.8rem 1.3rem;
+      border: 1px solid rgba(255,255,255,0.18);
       box-shadow: var(--shadow);
       text-align: center;
       transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -149,14 +149,14 @@
       background: var(--glass);
       border-radius: 36px;
       margin: 3rem 0.8rem;
-      padding: 5rem 1.8rem;
+      padding: 4.5rem 1.6rem;
       text-align: center;
-      border: 1px solid rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.2);
       box-shadow: var(--shadow);
     }
 
     .cta-section h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
 
     footer {
@@ -208,12 +208,16 @@
 
     @media (max-width: 768px) {
       h1 { font-size: 2.5rem; }
-      .hero-content { padding: 2rem 1.3rem; border-radius: 28px; max-width: 90%; }
+      .hero-content { 
+        padding: 1.6rem 1.2rem; 
+        border-radius: 28px; 
+        max-width: 92%; 
+      }
       .logo { max-width: 170px; }
       section { padding: 4.5rem 0 3rem; }
       h2 { font-size: 2.2rem; }
       .call-btn { width: 68px; height: 68px; bottom: 20px; right: 20px; font-size: 2rem; }
-      .adv-card { padding: 1.8rem 1.2rem; }
+      .adv-card { padding: 1.6rem 1.1rem; }
     }
   </style>
 </head>
@@ -250,11 +254,11 @@
 
     <section class="cta-section">
       <h2>Buyurtma berish oson!</h2>
-      <p style="font-size: 1.45rem; margin: 1.2rem 0 2rem; opacity: 0.92;">
+      <p style="font-size: 1.4rem; margin: 1.2rem 0 1.8rem; opacity: 0.92;">
         Telefon yoki Telegram orqali yozing — o'lchovga chiqamiz, maslahat beramiz.
       </p>
       <a href="tel:+998942216969" class="btn">+998 94 221 69 69</a>
-      <p style="margin-top: 1.8rem; font-size: 1.15rem; opacity: 0.85;">
+      <p style="margin-top: 1.6rem; font-size: 1.1rem; opacity: 0.85;">
         Navoiy shahri, Darxon bozori
       </p>
     </section>
@@ -264,7 +268,7 @@
   <footer>
     <img src="./logoislom.png" alt="Islom Logo" class="logo">
     <p>© 2026 MDF Eshiklar Navoiy • +998 94 221 69 69</p>
-    <p>powered by YASINDOORS</p>
+    <p>Sherxon, Do'st & Baxti</p>
   </footer>
 
   <a href="tel:+998942216969" class="call-btn">📞</a>
